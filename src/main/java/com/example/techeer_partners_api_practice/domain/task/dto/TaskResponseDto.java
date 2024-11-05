@@ -1,5 +1,7 @@
 package com.example.techeer_partners_api_practice.domain.task.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class TaskResponseDto {
     private final Long id;
     private final String title;
@@ -19,6 +21,7 @@ public class TaskResponseDto {
         return title;
     }
 
+    @JsonProperty("isDone")
     public boolean isDone() {
         return isDone;
     }

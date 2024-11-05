@@ -41,6 +41,13 @@ public class TaskController {
         return ResponseEntity.ok(new ApiResponse<>("success", "할 일이 삭제되었습니다."));
     }
 
+    // 할 일 전체 조회
+    @GetMapping
+    public ResponseEntity<ApiResponse<List<TaskResponseDto>>> getAllTasks() {
+        List<TaskResponseDto> tasks = taskService.getAllTasks();
+        return ResponseEntity.ok(new ApiResponse<>("success", "모든 일이 조회되었습니다.", tasks));
+    }
+
     // 완료된 일 조회
     @GetMapping("/completed")
     public ResponseEntity<ApiResponse<List<TaskResponseDto>>> getCompletedTasks() {

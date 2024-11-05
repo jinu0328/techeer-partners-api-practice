@@ -40,6 +40,15 @@ public class TaskService {
         taskRepository.delete(task);
     }
 
+    public List<TaskResponseDto> getAllTasks() {
+        List<Task> tasks = taskRepository.findAll();
+        List<TaskResponseDto> responseDtos = new ArrayList<>();
+        for(Task task : tasks) {
+            responseDtos.add(task.toDto());
+        }
+        return responseDtos;
+    }
+
     // 완료된 일 조회
     public List<TaskResponseDto> getCompletedTasks() {
         List<Task> tasks = taskRepository.findByIsDone(true);
