@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.example.techer-partners-api-practice' is invalid and this project uses 'com.example.techer_partners_api_practice' instead.
+* The original package name 'com.example.techeer-partners-api-practice' is invalid and this project uses 'com.example.techeer_partners_api_practice' instead.
 
 # Getting Started
 
